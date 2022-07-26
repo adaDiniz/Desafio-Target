@@ -8,7 +8,7 @@ a) Usar o json ou xml disponível como fonte dos dados do faturamento mensal;
 b) Podem existir dias sem faturamento, como nos finais de semana e feriados. 
 Estes dias devem ser ignorados no cálculo da média; */
 
-const jsonData= require('./data/dados.json'); 
+const jsonData = require('../data/dados.json'); 
 
 //O maior valor de faturamento ocorrido em um dia do mês:
 const maxValor = jsonData.reduce(function(prev, current) { 
