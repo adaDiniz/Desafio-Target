@@ -32,12 +32,27 @@ const dataDistribuidora = [
   }
 ];
 
-var total = dataDistribuidora.reduce(getTotal, 0);
+//calculando o total de faturamento mensal:
+const total = dataDistribuidora.reduce(getTotal, 0);
 
 function getTotal(total, item) {
    return total + item.valor;
 };
- 
 console.log(total);
 
-const calculoPercentural = jsonData.filter(item => item.valor > media);
+//cálculo do percentual de representação de cada estado dentro do valor total mensal:
+var percentualEstado = dataDistribuidora.map(function(item){
+  let percentual = (item.valor * 100) / total;
+
+  return item.estado + ' = ' + percentual + ' %'; 
+});
+
+console.log(percentualEstado);
+//resultado:
+// [
+//   'SP = 37.52845624346717 %',
+//   'RJ = 20.29136095279497 %',
+//   'MG = 16.170548370275323 %',
+//   'ES = 15.02848141496807 %',
+//   'Outros = 10.981153018494469 %'
+// ]

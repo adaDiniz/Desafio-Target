@@ -8,11 +8,12 @@ function generateFibonacci(number){
   var fibonacci = [];
   fibonacci[0] = 0;
   fibonacci[1] = 1;
+
+  var limiteFibonacci = number;
   
-  for (var i = 2; i < 50; i++) {
+  for (var i = 2; i <= limiteFibonacci; i++) {
     fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1];
   }
-
   if (fibonacci.includes(number)){
     console.log(number + ' pertece') 
   } else {
@@ -21,5 +22,5 @@ function generateFibonacci(number){
   console.log(fibonacci)
 }
 //exemplo:
-generateFibonacci(610);
-//resposta: 610 pertence
+generateFibonacci(34);
+//resposta: 34 pertence

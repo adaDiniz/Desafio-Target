@@ -4,15 +4,15 @@ a) Essa string pode ser informada através de qualquer entrada de sua preferênc
 b) Evite usar funções prontas, como, por exemplo, reverse;
 */
 
-function caracteres(p) {
-  
-    var splitP = p.split("");
+function caracteres(palavra) {
     
-    var reverseP = splitP.reverse(); 
+    var pInvertida = "";
 
-    var joinP = reverseP.join(""); 
-
-    console.log(joinP);
+    for (i = palavra.length - 1; i >= 0 ; i-- ) {
+       pInvertida += palavra[i];        
+    }
+    console.log(pInvertida);
 }
  
-caracteres("Ada Diniz");
+caracteres("ada carina diniz"); // resultado: zinid anirac ada
+
